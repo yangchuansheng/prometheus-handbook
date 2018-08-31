@@ -1,0 +1,73 @@
+{
+"author" : "Ivo Balbaert",
+"description" : "《The Way to Go》中文译本",
+"language" : "zh-hans",
+"title" : "Go入门指南",
+"plugins": [
+    "splitter",
+    "todo",
+    "alerts",
+    "-lunr", "-search", "search-plus",
+    "advanced-emoji",
+    "-sharing", "sharing-plus",
+    "simple-page-toc",
+    "anchor-navigation-ex",
+    "theme-comscore",
+    "copy-code-button",
+    "download-pdf-link"
+],
+"pluginsConfig": {
+    "sharing": {
+       "douban": false,
+       "facebook": false,
+       "google": true,
+       "hatenaBookmark": false,
+       "instapaper": false,
+       "line": true,
+       "linkedin": true,
+       "messenger": false,
+       "pocket": false,
+       "qq": false,
+       "qzone": true,
+       "stumbleupon": false,
+       "twitter": false,
+       "viber": false,
+       "vk": false,
+       "weibo": true,
+       "whatsapp": false,
+       "all": [
+           "facebook", "google", "twitter",
+           "weibo", "instapaper", "linkedin",
+           "pocket", "stumbleupon"
+       ]
+   },
+   "simple-page-toc": {
+       "maxDepth": 3,
+       "skipFirstH1": true
+   },
+   "anchor-navigation-ex": {
+       "showLevel": false,
+       "associatedWithSummary": true,
+       "printLog": false,
+       "multipleH1": true,
+       "mode": "float",
+       "float": {
+           "showLevelIcon": true,
+           "level1Icon": "fa fa-hand-o-right",
+           "level2Icon": "fa fa-hand-o-right",
+           "level3Icon": "fa fa-hand-o-right"
+       },
+       "pageTop": {
+           "showLevelIcon": false,
+           "level1Icon": "fa fa-hand-o-right",
+           "level2Icon": "fa fa-hand-o-right",
+           "level3Icon": "fa fa-hand-o-right"
+       }
+   },
+   "download-pdf-link": {
+     "base": "https://www.gitbook.com/download/pdf/book/yangchuansheng/the-way-to-go",
+      "label": "Download PDF",
+      "multilingual": false
+   }
+}
+}
