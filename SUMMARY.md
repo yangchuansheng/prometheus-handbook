@@ -10,7 +10,8 @@
 - 第2节：安装
 - 第3节：配置
 - 第4节：查询
-        - 4.1 [初识 PromQL](4-prometheus/basics.md)
+    - 4.1 [初识 PromQL](4-prometheus/basics.md)
+    - 4.1 [操作符](4-prometheus/operators.md)
 - 第5节：存储
 - 第6节：联邦集群
 - 第7节：迁移
