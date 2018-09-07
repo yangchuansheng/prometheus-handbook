@@ -160,6 +160,103 @@ method_code:http_errors:rate5m / ignoring(code) group_left method:http_requests:
 
 > 提醒：`group` 修饰符只能在比较和数学运算符中使用。在逻辑运算 `and`，`unless` 和 `or` 操作中默认与右向量中的所有元素进行匹配。
 
+## 聚合操作
+
+Prometheus 还提供了下列内置的聚合操作符，这些操作符作用域瞬时向量。可以将瞬时表达式返回的样本数据进行聚合，形成一个具有较少样本值的新的时间序列。
+
++ `sum` (求和)
++ `min` (最小值)
++ `max` (最大值)
++ `avg` (平均值)
++ `stddev` (标准差)
++ `stdvar` (标准差异)
++ `count` (计数)
++ `count_values` (对 value 进行计数)
++ `bottomk` (样本值最小的 k 个元素)
++ `topk` (样本值最大的k个元素)
++ `quantile` (分布统计)
+
+这些操作符被用于聚合所有标签维度，或者通过 `without` 或者 `by` 子语句来保留不同的维度。
+
+```bash
+<aggr-op>([parameter,] <vector expression>) [without|by (<label list>)]
+```
+
+其中只有 `count_values`, `quantile`, `topk`, `bottomk` 支持参数(parameter)。
+
+`without` 用于从计算结果中移除列举的标签，而保留其它标签。`by` 则正好相反，结果向量中只保留列出的标签，其余标签则移除。通过 without 和 by 可以按照样本的问题对数据进行聚合。
+
+例如：
+
+如果指标 `http_requests_total` 的时间序列的标签集为 `application`, `instance`, 和 `group`，我们可以通过以下方式计算所有 instance 中每个 application 和 group 的请求总量：
+
+```bash
+sum(http_requests_total) without (instance)
+```
+
+等价于
+
+```bash
+ sum(http_requests_total) by (application, group)
+```
+
+如果只需要计算整个应用的 HTTP 请求总量，可以直接使用表达式：
+
+```bash
+sum(http_requests_total)
+```
+
+`count_values` 用于时间序列中每一个样本值出现的次数。count_values 会为每一个唯一的样本值输出一个时间序列，并且每一个时间序列包含一个额外的标签。这个标签的名字由聚合参数指定，同时这个标签值是唯一的样本值。
+
+例如要计算运行每个构建版本的二进制文件的数量：
+
+```bash
+count_values("version", build_version)
+```
+
+返回结果如下：
+
+```bash
+{count="641"}   1
+{count="3226"}  2
+{count="644"}   4
+```
+
+`topk` 和 `bottomk` 则用于对样本值进行排序，返回当前样本值前 n 位，或者后 n 位的时间序列。
+
+获取 HTTP 请求数前 5 位的时序样本数据，可以使用表达式：
+
+```bash
+topk(5, http_requests_total)
+```
+
+`quantile` 用于计算当前样本数据值的分布情况 quantile(φ, express) ，其中 `0 ≤ φ ≤ 1`。
+
+例如，当 φ 为 0.5 时，即表示找到当前样本数据中的中位数：
+
+```bash
+quantile(0.5, http_requests_total)
+```
+
+返回结果如下：
+
+```bash
+{}   656
+```
+
+## 二元运算符优先级
+
+在 Prometheus 系统中，二元运算符优先级从高到低的顺序为：
+
+1. `^`
+2. `*`, `/`, `%`
+3. `+`, `-`
+4. `==`, `!=`, `<=`, `<`, `>=`, `>`
+5. `and`, `unless`
+6. `or`
+
+具有相同优先级的运算符是满足结合律的（左结合）。例如，`2 * 3 % 2` 等价于 `(2 * 3) % 2`。运算符 `^` 例外，`^` 满足的是右结合，例如，`2 ^ 3 ^ 2` 等价于 `2 ^ (3 ^ 2)`。
+
 
 
 
