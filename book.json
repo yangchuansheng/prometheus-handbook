@@ -49,10 +49,10 @@
        "skipFirstH1": true
    },
    "anchor-navigation-ex": {
-       "showLevel": false,
+       "showLevel": true,
        "associatedWithSummary": true,
        "printLog": false,
-       "multipleH1": true,
+       "multipleH1": false,
        "mode": "float",
        "float": {
            "showLevelIcon": true,
