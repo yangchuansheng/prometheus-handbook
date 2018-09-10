@@ -1,20 +1,23 @@
 {
-"author" : "Ivo Balbaert",
-"description" : "《The Way to Go》中文译本",
+"author" : "杨传胜",
+"description" : "Prometheus 中文文档",
 "language" : "zh-hans",
-"title" : "Go入门指南",
+"title" : "Prometheus 中文文档",
 "plugins": [
     "splitter",
     "todo",
     "alerts",
+    "anchors",
     "-lunr", "-search", "search-plus",
     "advanced-emoji",
     "-sharing", "sharing-plus",
     "simple-page-toc",
     "anchor-navigation-ex",
     "theme-comscore",
-    "copy-code-button",
-    "download-pdf-link"
+    "download-pdf-link",
+    "code",
+    "-highlight", "prism", "prism-themes",
+    "favicon-plus"
 ],
 "pluginsConfig": {
     "sharing": {
@@ -68,6 +71,14 @@
      "base": "https://www.gitbook.com/download/pdf/book/yangchuansheng/the-way-to-go",
       "label": "Download PDF",
       "multilingual": false
+   },
+   "prism": {
+     "css": [
+       "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+     ]
+   },
+   "favicon-plus": {
+     "favicon": "./favicon-96x96.png"
    }
 }
 }
