@@ -22,3 +22,7 @@
 ## 贡献者
 
 欢迎参与贡献和完善内容，贡献方法参考 [CONTRIBUTING](https://github.com/yangchuansheng/prometheus-handbook/blob/master/CONTRIBUTING.md)。感谢所有的贡献者，贡献者列表见 [contributors](https://github.com/yangchuansheng/prometheus-handbook/graphs/contributors)。
+
+## 测试
+
+仅供测试
