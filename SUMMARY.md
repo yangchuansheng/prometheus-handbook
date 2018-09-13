@@ -17,6 +17,7 @@
     - 4.1 [初识 PromQL](4-prometheus/basics.md)
     - 4.2 [操作符](4-prometheus/operators.md)
     - 4.3 [PromQL 内置函数](4-prometheus/functions.md)
+    - 4.4 [简单示例](4-prometheus/examples.md)
 - 第5节：存储
 - 第6节：联邦集群
 - 第7节：迁移
