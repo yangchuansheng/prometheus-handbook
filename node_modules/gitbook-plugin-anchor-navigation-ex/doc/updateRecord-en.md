@@ -1,4 +1,9 @@
 # Update record
+## v 1.0.12 - 2018-09-17
+- [#36](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/36) Merge this pr to add the following functions
+- config.float.floatIcon ，You can configure the float navigation float icon style  V1.0.12+
+- Add the `<!-- ex_nolevel -->` tag to the page，No hierarchical Numbers are generated on this page V1.0.12+
+
 ## v 1.0.11 - 2018-08-22
 - [#33](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/33) The return top button is separated, and the return top button is displayed for true
 
@@ -25,7 +30,7 @@ This update is mainly to fix the title after the repeated strategy, and fix the 
 - Use the `<! - ex_nonav ->` annotation to let the page do not display navigation [#15](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/15)
 ## v1.0.2 - 2017-05-15
 - Adding an `<extoc></extoc>` tag to the page generates the TOC directory here (which is consistent with the mode: pageTop pattern for the moment)[#17](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/17)
- 
+
 ## v1.0.0 - 2017-03-09
 - [#7](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/7)
 - [#8](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/8)

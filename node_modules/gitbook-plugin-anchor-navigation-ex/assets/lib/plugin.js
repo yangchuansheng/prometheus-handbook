@@ -10,9 +10,10 @@ var Config = require('./config.js');
  * @param page
  * @returns {Array} 返回处理好的tocs合集
  */
-function handlerTocs($, page) {
+function handlerTocs($, page, modifyHeader) {
     var config = Config.config;
     var tocs = [];
+
     var count = {
         h1: 0,
         h2: 0,
@@ -27,13 +28,13 @@ function handlerTocs($, page) {
         if (id) {
             switch (elem.tagName) {
                 case "h1":
-                    handlerH1Toc(config, count, header, tocs, page.level);
+                    handlerH1Toc(config, count, header, tocs, page.level, modifyHeader);
                     break;
                 case "h2":
-                    handlerH2Toc(config, count, header, tocs, page.level);
+                    handlerH2Toc(config, count, header, tocs, page.level, modifyHeader);
                     break;
                 case "h3":
-                    handlerH3Toc(config, count, header, tocs, page.level);
+                    handlerH3Toc(config, count, header, tocs, page.level, modifyHeader);
                     break;
                 default:
                     titleAddAnchor(header, id);
@@ -82,7 +83,7 @@ function titleAddAnchor(header, id) {
  * @param header
  * @param tocs 根节点
  */
-function handlerH1Toc(config, count, header, tocs, pageLevel) {
+function handlerH1Toc(config, count, header, tocs, pageLevel, modifyHeader) {
     var title = header.text();
     var id = header.attr('id');
     var level = ''; //层级
@@ -101,6 +102,9 @@ function handlerH1Toc(config, count, header, tocs, pageLevel) {
         if (config.associatedWithSummary && config.themeDefault.showLevel) {
             level = pageLevel + '.' + level;
         }
+        if (!modifyHeader) {
+            level  = '';
+        }
         header.text(level + title); //重写标题
     }
     titleAddAnchor(header, id);
@@ -117,7 +121,7 @@ function handlerH1Toc(config, count, header, tocs, pageLevel) {
  * @param count 计数器
  * @param header
  */
-function handlerH2Toc(config, count, header, tocs, pageLevel) {
+function handlerH2Toc(config, count, header, tocs, pageLevel, modifyHeader) {
     var title = header.text();
     var id = header.attr('id');
     var level = ''; //层级
@@ -140,6 +144,9 @@ function handlerH2Toc(config, count, header, tocs, pageLevel) {
         if (config.associatedWithSummary && config.themeDefault.showLevel) {
             level = pageLevel + '.' + level;
         }
+        if (!modifyHeader) {
+            level  = '';
+        }
         header.text(level + title); //重写标题
     }
     titleAddAnchor(header, id);
@@ -156,7 +163,7 @@ function handlerH2Toc(config, count, header, tocs, pageLevel) {
  * @param count 计数器
  * @param header
  */
-function handlerH3Toc(config, count, header, tocs, pageLevel) {
+function handlerH3Toc(config, count, header, tocs, pageLevel, modifyHeader) {
     var title = header.text();
     var id = header.attr('id');
     var level = ''; //层级
@@ -184,6 +191,9 @@ function handlerH3Toc(config, count, header, tocs, pageLevel) {
         if (config.associatedWithSummary && config.themeDefault.showLevel) {
             level = pageLevel + "." + level;
         }
+        if (!modifyHeader) {
+            level  = '';
+        }
         header.text(level + title); //重写标题
     }
     titleAddAnchor(header, id);
@@ -203,6 +213,7 @@ function handlerH3Toc(config, count, header, tocs, pageLevel) {
 function handlerFloatNavbar($, tocs) {
     var config = Config.config;
     var float = config.float;
+    var floatIcon = float.floatIcon;
     var level1Icon = '';
     var level2Icon = '';
     var level3Icon = '';
@@ -212,7 +223,7 @@ function handlerFloatNavbar($, tocs) {
         level3Icon = float.level3Icon;
     }
 
-    var html = "<div id='anchor-navigation-ex-navbar'><i class='fa fa-anchor'></i><ul>";
+    var html = "<div id='anchor-navigation-ex-navbar'><i class='" + floatIcon + "'></i><ul>";
     for (var i = 0; i < tocs.length; i++) {
         var h1Toc = tocs[i];
         html += "<li><span class='title-icon " + level1Icon + "'></span><a href='#" + h1Toc.url + "'><b>" + h1Toc.level + "</b>" + h1Toc.name + "</a></li>";
@@ -296,8 +307,10 @@ function buildGoTop(tocs) {
 
 function start(bookIns, page) {
     var $ = cheerio.load(page.content);
+    var modifyHeader = !/<!--[ \t]*ex_nolevel[ \t]*-->/.test(page.content)
+
     // 处理toc相关，同时处理标题和id
-    var tocs = handlerTocs($, page);
+    var tocs = handlerTocs($, page, modifyHeader);
 
     // 设置处理之后的内容
     if (tocs.length == 0) {

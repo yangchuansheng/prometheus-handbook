@@ -1,4 +1,9 @@
 # Update record
+## v 1.0.12 - 2018-09-17
+- [#36](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/36) 合并该 pr，增加以下功能
+- config.float.floatIcon 可以配置浮动导航的悬浮图标样式  V1.0.12+
+- 在页面中增加`<!-- ex_nolevel -->`不会在该页面生成层级序号 V1.0.12+
+
 ## v 1.0.11 - 2018-08-22
 - [#33](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/33) 把返回顶部按钮独立出来了，为true的时候显示返回顶部按钮
 
@@ -27,7 +32,7 @@
 
 ## v1.0.2 - 2017-05-15
 - 在页面中增加`<extoc></extoc>`标签，会在此处生成TOC目录(该目录暂时与mode: "pageTop"模式生成的一致)[#17](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/17)
- 
+
 
 ## v1.0.0 - 2017-03-09
 - [#7](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/7)

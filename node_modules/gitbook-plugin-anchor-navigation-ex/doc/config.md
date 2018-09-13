@@ -9,6 +9,7 @@
     "mode": "float",
     "showGoTop":true,
     "float": {
+        "floatIcon": "fa fa-navicon",
         "showLevelIcon": false,
         "level1Icon": "fa fa-hand-o-right",
         "level2Icon": "fa fa-hand-o-right",
@@ -123,15 +124,16 @@
 mode = float的时候以下配置生效
 ```
     float: { //浮动导航设置
-        showLevelIcon: false,  //是否显示层级图标
-        level1Icon: "fa fa-hand-o-right", //层级的图标css
-        level2Icon: "fa fa-hand-o-right",
-        level3Icon: "fa fa-hand-o-right"
+        "floatIcon": "fa fa-navicon", // 配置导航图标，如果你喜欢原先的 锚 图标可以配置为 fa-anchor
+        "showLevelIcon": false,  //是否显示层级图标
+        "level1Icon": "fa fa-hand-o-right", //层级的图标css
+        "level2Icon": "fa fa-hand-o-right",
+        "level3Icon": "fa fa-hand-o-right"
     }
 ```
 图标使用官网默认主题引入的css `http://fontawesome.dashgame.com/`
 
-## pageTop 
+## pageTop
 mode = pageTop的时候以下配置生效
 ```
 pageTop: {

@@ -11,6 +11,7 @@ const defaultConfig = {
     mode: "float",
     showGoTop: true, //是否显示返回顶部摁扭
     float: { //浮动导航设置
+        floatIcon: "fa fa-navicon",
         showLevelIcon: false,  //是否显示层级图标
         level1Icon: "fa fa-hand-o-right",
         level2Icon: "fa fa-hand-o-right",

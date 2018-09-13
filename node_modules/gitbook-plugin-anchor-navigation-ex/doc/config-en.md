@@ -9,6 +9,7 @@ Configuration of this plug-in supports the following parameters:The configuratio
     "mode": "float",
     "showGoTop":true,
     "float": {
+        "floatIcon": "fa fa-navicon",
         "showLevelIcon": false,
         "level1Icon": "fa fa-hand-o-right",
         "level2Icon": "fa fa-hand-o-right",
@@ -124,10 +125,11 @@ There are three kinds of navigation mode:
 mode = float The following configuration to take effect
 ```
     float: { //浮动导航设置
-        showLevelIcon: false,  //是否显示层级图标
-        level1Icon: "fa fa-hand-o-right", //层级的图标css
-        level2Icon: "fa fa-hand-o-right",
-        level3Icon: "fa fa-hand-o-right"
+        "floatIcon": "fa fa-navicon", // 配置导航图标，如果你喜欢原先的 锚 图标可以配置为 fa-anchor
+        "showLevelIcon": false,  //是否显示层级图标
+        "level1Icon": "fa fa-hand-o-right", //层级的图标css
+        "level2Icon": "fa fa-hand-o-right",
+        "level3Icon": "fa fa-hand-o-right"
     }
 ```
 Icon to use the default theme website to introduce the CSS `http://fontawesome.dashgame.com/`

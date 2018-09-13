@@ -3,11 +3,19 @@
 "description" : "Prometheus 中文文档",
 "language" : "zh-hans",
 "title" : "Prometheus 中文文档",
+  "links": {
+      "sidebar": {
+          "Ryan Yang": "https://www.yangcs.net"
+      }
+  },
 "plugins": [
     "splitter",
     "todo",
     "alerts",
     "anchors",
+    "image-captions",
+    "tbfed-pagefooter@^0.0.1",
+    "github-buttons@2.1.0",
     "-lunr", "-search", "search-plus",
     "advanced-emoji",
     "-sharing", "sharing-plus",
@@ -72,10 +80,23 @@
       "label": "Download PDF",
       "multilingual": false
    },
+   "tbfed-pagefooter": {
+      "copyright": "Copyright © www.yangcs.net 2018",
+      "modify_label": " Updated at ",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+   },
    "prism": {
      "css": [
        "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
      ]
+   },
+   "sitemap-general": {
+     "prefix": "https://www.yangcs.net/prometheus/"
+   },
+   "github-buttons": {
+     "repo": "yangchuansheng/prometheus-handbook",
+     "types": ["star"],
+     "size": "small"
    },
    "favicon-plus": {
      "favicon": "./favicon-96x96.png"
