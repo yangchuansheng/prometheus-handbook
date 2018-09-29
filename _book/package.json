@@ -1,0 +1,21 @@
+{
+  "name": "gitbook-plugin-books-code",
+  "description": "综合性的一个插件",
+  "main": "index.js",
+  "version": "1.0.4",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "homepage": "https://github.com/liushilive/gitbook-plugin-books-code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liushilive/gitbook-plugin-books-code.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/liushilive/gitbook-plugin-books-code/issues"
+  },
+  "dependencies": {
+    "gitbook-plugin-copy-code": "^4.0.0-alpha.1"
+  }
+}
