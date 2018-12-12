@@ -4,7 +4,7 @@
 
 ## 第一章：介绍
 
-- [第一节：Prometheus 简介](1-introduction/overview.md)
+- [第1节：Prometheus 简介](1-introduction/overview.md)
 
 ## 第二章：概念
 
