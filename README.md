@@ -17,7 +17,7 @@
 
 扫码关注微信公众号，后续部分章节会在微信公众号中同步更新。
 
-![](http://o7z41ciog.bkt.clouddn.com/qrcode_for_wechat.jpg)
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fy41wwmz6cj307804gmxr.jpg)
 
 ## 贡献者
 
