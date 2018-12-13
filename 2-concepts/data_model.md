@@ -1,6 +1,6 @@
 # 数据模型
 
-Prometheus 所有采集的监控数据均以指标（metric）的形式保存在内置的[时间序列](https://www.wikiwand.com/zh/%E6%99%82%E9%96%93%E5%BA%8F%E5%88%97)数据库当中（TSDB）。每一条时间序列由指标名称（Metrics Name）以及一组标签（Labels）唯一标识，每条时间序列按照时间的先后顺序存储一系列的样本值。除了存储时间序列数据外，Prometheus 还可以临时生成时间序列数据作为查询的返回结果。
+Prometheus 所有采集的监控数据均以指标（metric）的形式保存在内置的[时间序列](https://www.wikiwand.com/zh/%E6%99%82%E9%96%93%E5%BA%8F%E5%88%97)数据库当中（TSDB）：属于同一指标名称，同一标签集合的、有时间戳标记的数据流。除了存储的时间序列，Prometheus 还可以根据查询请求产生临时的、衍生的时间序列作为返回结果。
 
 ## 指标名称和标签
 
@@ -24,9 +24,9 @@ Prometheus 所有采集的监控数据均以指标（metric）的形式保存在
 + 时间戳（timestamp）：一个精确到毫秒的时间戳；
 + 样本值（value）： 一个 folat64 的浮点型数据表示当前样本的值。
 
-## 符号
+## 表示方式
 
-表示一个度量指标和一组键值对标签，需要使用以下符号：
+通过如下表达方式表示指定指标名称和指定标签集合的时间序列：
 
 ```bash
 <metric name>{<label name>=<label value>, ...}
@@ -38,4 +38,4 @@ Prometheus 所有采集的监控数据均以指标（metric）的形式保存在
 api_http_requests_total{method="POST", handler="/messages"}
 ```
 
-这与 [OpenTSDB](http://opentsdb.net/) 中使用的符号相同。
+这与 [OpenTSDB](http://opentsdb.net/) 中使用的标记法相同。

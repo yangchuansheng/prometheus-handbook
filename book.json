@@ -5,7 +5,8 @@
 "title" : "Prometheus 中文文档",
   "links": {
       "sidebar": {
-          "Ryan Yang": "https://www.yangcs.net"
+          "Ryan Yang": "https://www.yangcs.net",
+          "Kubernetes 知识图谱": "https://github.com/yangchuansheng/k8s-knowledge"
       }
   },
 "plugins": [
@@ -34,14 +35,14 @@
        "google": true,
        "hatenaBookmark": false,
        "instapaper": false,
-       "line": true,
+       "line": false,
        "linkedin": true,
        "messenger": false,
        "pocket": false,
        "qq": false,
        "qzone": true,
        "stumbleupon": false,
-       "twitter": false,
+       "twitter": true,
        "viber": false,
        "vk": false,
        "weibo": true,
