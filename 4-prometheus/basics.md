@@ -4,7 +4,7 @@ Prometheus 提供了一种功能表达式语言 `PromQL`，允许用户实时选
 
 ## 例子
 
-本节仅供参考，想进一步学习可以通过后面的[例子](https://prometheus.io/docs/prometheus/latest/querying/examples/)入手。
+本节仅供参考，想进一步学习可以通过后面的[例子](examples.html)入手。
 
 ## 表达式语言数据类型
 
