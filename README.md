@@ -13,6 +13,10 @@
 
 项目源码存放于 Github 上，[https://github.com/yangchuansheng/prometheus-handbook](https://github.com/yangchuansheng/prometheus-handbook)。
 
+### 本书版本更新记录
+
+如无特殊说明，本指南所有文档仅适用于 Prometheus v2.6 及以上版本。
+
 ## 微信公众号
 
 扫码关注微信公众号，后续部分章节会在微信公众号中同步更新。
