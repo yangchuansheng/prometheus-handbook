@@ -20,7 +20,7 @@
     - 4.3 [PromQL 内置函数](4-prometheus/functions.md)
     - 4.4 [简单示例](4-prometheus/examples.md)
     - 4.5 [在 HTTP API 中使用 PromQL](4-prometheus/api.md)
-- 第5节：存储
+- [第5节：存储](4-prometheus/storage.md)
 - 第6节：联邦集群
 - 第7节：迁移
 - 第8节：API 稳定性
