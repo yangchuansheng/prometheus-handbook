@@ -94,7 +94,7 @@ Prometheus 可以通过两种方式来集成远程存储。
 
 ### 配置文件
 
-想知道如何在 Prometheus 中添加远程存储的配置，请参考前面的章节：[配置远程写](https://www.yangcs.net/prometheus/3-configuration/configuration.html#remote_write) 和 [配置远程读](https://www.yangcs.net/prometheus/3-configuration/configuration.html#remote_read)。
+想知道如何在 Prometheus 中添加远程存储的配置，请参考前面的章节：[配置远程写](https://www.yangcs.net/prometheus/3-prometheus/configuration.html#remote_write) 和 [配置远程读](https://www.yangcs.net/prometheus/3-prometheus/configuration.html#remote_read)。
 
 关于请求与响应消息的详细信息，可以查看远程存储相关协议的 proto 文件：
 
@@ -158,7 +158,7 @@ message QueryResult {
 | [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) | write      |
 | [Wavefront](https://github.com/wavefrontHQ/prometheus-storage-adapter) | write      |
 
-更多信息请查看[集成文档](https://www.yangcs.net/prometheus/)。
+更多信息请查看[集成文档](https://www.yangcs.net/prometheus/6-operating/integrations.html#remote-endpoints-and-storage)。
 
 
 
