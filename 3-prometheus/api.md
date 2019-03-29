@@ -63,7 +63,7 @@ URL 请求参数：
 }
 ```
 
-`<value>` 指的是查询结果数据，具体的格式取决于 `resultType`，不同的结果类型，会有不同的结果数据格式。参考 [响应数据格式](https://www.yangcs.net/prometheus/4-prometheus/api.html#响应数据格式)。
+`<value>` 指的是查询结果数据，具体的格式取决于 `resultType`，不同的结果类型，会有不同的结果数据格式。参考 [响应数据格式](https://www.yangcs.net/prometheus/3-prometheus/api.html#响应数据格式)。
 
 例如使用以下表达式查询表达式 `up` 在时间点 `2015-07-01T20:10:51.781Z` 的计算结果：
 
@@ -128,7 +128,7 @@ URL 请求参数：
 
 <br />
 
-对于 `<value>` 占位符的格式，详见 [区间向量查询结果格式](https://www.yangcs.net/prometheus/4-prometheus/api.html#区间向量)。
+对于 `<value>` 占位符的格式，详见 [区间向量查询结果格式](https://www.yangcs.net/prometheus/3-prometheus/api.html#区间向量)。
 
 例如使用以下表达式查询表达式 `up` 在 30 秒范围内以 15 秒为间隔计算 PromQL 表达式的结果。
 

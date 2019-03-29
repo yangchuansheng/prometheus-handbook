@@ -4,6 +4,8 @@
 
 本文是 Prometheus 官方文档的中文版，同时包括了本人平时在使用 Prometheus 时的参考指南和实践总结，形成一个系统化的参考指南以方便查阅。欢迎大家关注和添加完善内容。
 
+官方文档地址：[https://prometheus.io/docs/introduction/overview/](https://prometheus.io/docs/introduction/overview/)
+
 ## 在线阅读
 
 + Gitbook : [https://www.yangcs.net/prometheus/](https://www.yangcs.net/prometheus/)
