@@ -6,28 +6,28 @@
 
 ## 从源代码构建
 
-要从源代码构建 Prometheus 组件，请查看相应仓库中的 ```Makefile```。
+要从源代码构建 Prometheus 组件，请查看相应仓库中的 `Makefile`。
 
 ## 使用Docker
 
 所有可用的 Prometheus 容器镜像可在公有镜像仓库 [Quay.io](https://quay.io/repository/prometheus/prometheus) 或者 [Docker Hub](https://hub.docker.com/u/prom/) 中获取。
 
-使用 Docker 运行 Prometheus 相当简单，只需要命名 ```docker run -p 9090:9090 prom/prometheus```，Prometheus 将使用一个简单的配置文件启动并暴露服务到9090端口。
+使用 Docker 运行 Prometheus 相当简单，只需要命名 `docker run -p 9090:9090 prom/prometheus`，Prometheus 将使用一个简单的配置文件启动并暴露服务到9090端口。
 
 Prometheus 容器镜像使用卷来存储实际的 metrics 指标。对于生产部署，强烈推荐使用 [容器数据卷](https://docs.docker.com/engine/admin/volumes/volumes/) 来简化 Prometheus 升级时的数据管理操作。
 
 * 绑定及挂载数据卷
 
-用以下命令将主机文件系统中的 ```prometheus.yml``` 挂载到容器中：
+用以下命令将主机文件系统中的 `prometheus.yml` 挂载到容器中：
 
-```
+```bash
 docker run -p 9090:9090 -v /tmp/prometheus.yml:/etc/prometheus/prometheus.yml \
        prom/prometheus
 ```
 
 或者使用额外的数据卷挂载配置文件：
 
-```
+```bash
 docker run -p 9090:9090 -v /prometheus-data \
        prom/prometheus --config.file=/prometheus-data/prometheus.yml
 ```
@@ -38,14 +38,14 @@ docker run -p 9090:9090 -v /prometheus-data \
 
 创建一个新的路径来存放 Prometheus 配置文件， Dockerfile 如下：
 
-```
+```yaml
 FROM prom/prometheus
 ADD prometheus.yml /etc/prometheus/
 ```
 
 执行以下命令构建新镜像，并运行容器：
 
-```
+```bash
 docker build -t my-prometheus .
 docker run -p 9090:9090 my-prometheus
 ```

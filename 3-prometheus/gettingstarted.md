@@ -6,7 +6,7 @@
 
 为你的平台下载[最新版本的 Prometheus](https://prometheus.io/download)，执行以下命令解压：
 
-```
+```bash
 tar xvfz prometheus-*.tar.gz
 cd prometheus-*
 ```
@@ -19,7 +19,7 @@ Prometheus 通过在目标节点的 HTTP 端口上采集 metrics（遥测专用�
 
 虽然在生产实践中 Prometheus 服务器只收集自己的数据没多大作用，但是这是个不错的入门示例。保存以下基础配置到文件 prometheus.yml 中：
 
-```
+```yaml
 global:
   scrape_interval:     15s # By default, scrape targets every 15 seconds.
 
@@ -47,7 +47,7 @@ scrape_configs:
 
 使用上一步创建的配置文件启动 Prometheus，修改以下命令为你的平台中 Prometheus 二进制文件所在路径，执行命令启动：
 
-```
+```bash
 # Start Prometheus.
 # By default, Prometheus stores its database in ./data (flag --storage.tsdb.path).
 ./prometheus --config.file=prometheus.yml
@@ -63,7 +63,9 @@ scrape_configs:
 
 正如你可以从 [localhost:9090/metrics](localhost:9090/metrics) 收集 metrics，Prometheus 暴露的一个度量指标称为 prometheus_target_interval_length_seconds（目标擦除之间的实际时间量）。继续在表达式控制台输入：
 
-```prometheus_target_interval_length_seconds```
+```
+prometheus_target_interval_length_seconds
+```
 
 此时应该返回许多不同的时间序列(以及每条记录的最新值)，所有时间序列都有 metric 名称 prometheus_target_interval_length_seconds ，但具有不同的标签。这些标签指定不同延迟百分比和目标组间隔。
 
@@ -103,7 +105,7 @@ Go 客户端库包含一个示例，该示例为具有不同延迟分布的三�
 
 下载 Prometheus 的 Go 客户端库并运行这三个示例：
 
-```
+```bash
 # Fetch the client library code and compile example.
 git clone https://github.com/prometheus/client_golang.git
 cd client_golang/examples/random
@@ -124,7 +126,7 @@ go build
 
 要实现此目的，请将以下作业定义添加到 ```prometheus.yml``` 中的 ```scrape_configs``` 部分，然后重新启动 Prometheus 实例：
 
-```
+```yaml
 scrape_configs:
   - job_name:       'example-random'
 
@@ -153,9 +155,9 @@ avg(rate(rpc_durations_seconds_count[5m])) by (job, service)
 
 尝试绘制此表达式。
 
-要将此表达式生成的时间序列记录到名为 ```job_service：rpc_durations_seconds_count：avg_rate5m``` 的新的 metric 指标中，请使用以下记录规则创建一个文件并将其另存为```prometheus.rules.yml```：
+要将此表达式生成的时间序列记录到名为 `job_service：rpc_durations_seconds_count：avg_rate5m` 的新的 metric 指标中，请使用以下记录规则创建一个文件并将其另存为`prometheus.rules.yml`：
 
-```
+```yaml
 groups:
 - name: example
   rules:
@@ -163,9 +165,9 @@ groups:
     expr: avg(rate(rpc_durations_seconds_count[5m])) by (job, service)
 ```
 
-要使 Prometheus 使用此新规则，需要在 ```prometheus.yml``` 中添加 ```rule_files``` 语句。 配置现在应该如下所示：
+要使 Prometheus 使用此新规则，需要在 `prometheus.yml` 中添加 `rule_files` 语句。 配置现在应该如下所示：
 
-```
+```yaml
 global:
   scrape_interval:     15s # By default, scrape targets every 15 seconds.
   evaluation_interval: 15s # Evaluate rules every 15 seconds.
@@ -201,5 +203,5 @@ scrape_configs:
           group: 'canary'
 ```
 
-重启 Prometheus 是新配置生效，并通过表达式浏览器查询或绘制图表来验证带有新 metric 指标名称 ```job_service：rpc_durations_seconds_count：avg_rate5m``` 的新时间序列现在可用。
+重启 Prometheus 是新配置生效，并通过表达式浏览器查询或绘制图表来验证带有新 metric 指标名称 `job_service：rpc_durations_seconds_count：avg_rate5m` 的新时间序列现在可用。
 
