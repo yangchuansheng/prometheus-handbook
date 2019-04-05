@@ -1,5 +1,7 @@
 # 安装
 
+> 译者：[詹叶](https://heisenbergye.github.io/)
+
 ## 使用预编译二进制文件
 
 我们为绝大部分 Prometheus 组件提供预编译二进制文件。查看[下载](https://prometheus.io/download)获取所有可用版本列表。

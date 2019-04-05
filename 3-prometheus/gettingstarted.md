@@ -1,5 +1,7 @@
 # 快速开始
 
+> 译者：[詹叶](https://heisenbergye.github.io/)
+
 本文类似 “Hello World” 的向导，教你怎么安装，配置，并且用一个简单的例子演示如何使用 Prometheus。你可以在本地下载并运行 Prometheus，配置以采集自身和示例应用的运行数据，然后使用查询语句，规则和图形来使用收集到的时间序列数据。
 
 ## 下载和运行 Prometheus

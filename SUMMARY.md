@@ -13,6 +13,8 @@
 
 - 第1节：初识 Prometheus
 - 第2节：安装
+    - 2.1 [快速开始](3-prometheus/gettingstarted.md)
+    - 2.2 [安装](3-prometheus/installation.md)
 - 第3节：配置
 - 第4节：查询
     - 4.1 [初识 PromQL](3-prometheus/basics.md)
