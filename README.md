@@ -31,13 +31,13 @@
 
 显示如下：
 
-![](https://ws3.sinaimg.cn/large/006tKfTcly1g1ilrfr78jj317i06475a.jpg)
+![](https://hugo-picture.oss-cn-beijing.aliyuncs.com/blog/2019-06-01-104423.jpg)
 
 ## 微信公众号
 
-扫码关注微信公众号，后续部分章节会在微信公众号中同步更新。
+扫码关注微信公众号，坐上云原生的早班车。
 
-![](https://ws1.sinaimg.cn/large/006tNbRwgy1fy41wwmz6cj307804gmxr.jpg)
+![](https://hugo-picture.oss-cn-beijing.aliyuncs.com/blog/2019-06-01-%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
 
 ## 贡献者
 
