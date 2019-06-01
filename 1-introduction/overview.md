@@ -35,7 +35,7 @@ Prometheus 生态系统由多个组件组成，其中有许多组件是可选的
 
 Prometheus 的整体架构以及生态系统组件如下图所示：
 
-![](https://ws1.sinaimg.cn/large/006tNbRwgy1fy44rnxo9dj311j0mjadw.jpg)
+![](https://hugo-picture.oss-cn-beijing.aliyuncs.com/images/9Qt5yi.jpg)
 
 Prometheus Server 直接从监控目标中或者间接通过推送网关来拉取监控指标，它在本地存储所有抓取到的样本数据，并对此数据执行一系列规则，以汇总和记录现有数据的新时间序列或生成告警。可以通过 [Grafana](https://grafana.com/) 或者其他工具来实现监控数据的可视化。
 
