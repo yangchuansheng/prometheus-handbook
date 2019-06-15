@@ -1,12 +1,26 @@
-# Prometheus 中文文档
+<h1 align="center">Welcome to Prometheus 中文文档 👋</h1>
+<p>
+  <img src="https://img.shields.io/badge/version-2.6-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.yangcs.net/prometheus/">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/liushilive/gitbook-plugin-books-code/graphs/commit-activity">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/yangchuansheng/prometheus-handbook/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  </a>
+</p>
 
-随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。[Prometheus](https://prometheus.io) 作为生态圈 Cloud Native Computing Foundation（简称：CNCF）中的重要一员,其活跃度仅次于 Kubernetes, 现已广泛用于 Kubernetes 集群的监控系统中。
+随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Prometheus 作为生态圈 Cloud Native Computing Foundation（简称：CNCF）中的重要一员,其活跃度仅次于 Kubernetes, 现已广泛用于 Kubernetes 集群的监控系统中。
 
-本文是 Prometheus 官方文档的中文版，同时包括了本人平时在使用 Prometheus 时的参考指南和实践总结，形成一个系统化的参考指南以方便查阅。欢迎大家关注和添加完善内容。
+> 本文是 Prometheus 官方文档的中文版，同时包括了本人平时在使用 Prometheus 时的参考指南和实践总结，形成一个系统化的参考指南以方便查阅。欢迎大家关注和添加完善内容。
 
 官方文档地址：[https://prometheus.io/docs/introduction/overview/](https://prometheus.io/docs/introduction/overview/)
 
-## 在线阅读
+### 🏠 [Homepage](https://www.yangcs.net/prometheus/)
+
+## 🚀 在线阅读
 
 + Gitbook : [https://www.yangcs.net/prometheus/](https://www.yangcs.net/prometheus/)
 + Gitbook 新版 : [https://ryanyang.gitbook.io/prometheus/](https://ryanyang.gitbook.io/prometheus/)
@@ -39,6 +53,22 @@
 
 ![](https://hugo-picture.oss-cn-beijing.aliyuncs.com/blog/2019-06-01-%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
 
-## 贡献者
+## 作者
+
+👤 **Ryan Yang**
+
+* Github: [@yangchuansheng](https://github.com/yangchuansheng)
+* Wechat: yangchuansheng572887
+
+## 🤝 贡献者
 
 欢迎参与贡献和完善内容，贡献方法参考 [CONTRIBUTING](https://github.com/yangchuansheng/prometheus-handbook/blob/master/CONTRIBUTING.md)。感谢所有的贡献者，贡献者列表见 [contributors](https://github.com/yangchuansheng/prometheus-handbook/graphs/contributors)。
+
+## 支持我
+
+如果觉得这个项目对你有帮助，请给我一个 ⭐️ 吧！
+
+## 📝 License
+
+Copyright © 2019 [Ryan Yang](https://github.com/yangchuansheng).<br />
+This project is [MIT](https://github.com/liushilive/gitbook-plugin-books-code/blob/master/LICENSE) licensed.
