@@ -8,6 +8,7 @@
 
 ## 第二章：概念
 - [第1节：数据模型](2-concepts/data_model.md)
+- [第2节：指标类型](2-concepts/metric_types.md)
 
 ## 第三章：Prometheus
 
