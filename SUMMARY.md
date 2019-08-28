@@ -24,7 +24,7 @@
     - 4.4 [简单示例](3-prometheus/examples.md)
     - 4.5 [在 HTTP API 中使用 PromQL](3-prometheus/api.md)
 - [第5节：存储](3-prometheus/storage.md)
-- 第6节：联邦集群
+- [第6节：联邦集群](3-prometheus/federation.md)
 - 第7节：迁移
 - 第8节：API 稳定性
 
