@@ -20,7 +20,7 @@ rate(http_requests_total[5m])
 topk(10, http_requests_total)
 ```
 
-不要将 counter 类型应用于样本数据非单调递增的指标，例如：当前运行的进程数量（应该用 Guage 类型）。
+不要将 counter 类型应用于样本数据非单调递增的指标，例如：当前运行的进程数量（应该用 Gauge 类型）。
 
 不同语言关于 Counter 的客户端库使用文档：
 
@@ -29,9 +29,9 @@ topk(10, http_requests_total)
 + [Python](https://github.com/prometheus/client_python#counter)
 + [Ruby](https://github.com/prometheus/client_ruby#counter)
 
-# Guage（仪表盘）
+# Gauge（仪表盘）
 
-Guage 类型代表一种样本数据可以任意变化的指标，即可增可减。guage 通常用于像温度或者内存使用率这种指标数据，也可以表示能随时增加或减少的“总数”，例如：当前并发请求的数量。
+Gauge 类型代表一种样本数据可以任意变化的指标，即可增可减。Gauge 通常用于像温度或者内存使用率这种指标数据，也可以表示能随时增加或减少的“总数”，例如：当前并发请求的数量。
 
 对于 Gauge 类型的监控指标，通过 PromQL 内置函数 [delta()](https://www.yangcs.net/prometheus/3-prometheus/functions.html#delta) 可以获取样本在一段时间内的变化情况，例如，计算 CPU 温度在两小时内的差异：
 
@@ -45,7 +45,7 @@ dalta(cpu_temp_celsius{host="zeus"}[2h])
 predict_linear(node_filesystem_free{job="node"}[2h], 4 * 3600) < 0
 ```
 
-不同语言关于 Guage 的客户端库使用文档：
+不同语言关于 Gauge 的客户端库使用文档：
 
 + [Go](http://godoc.org/github.com/prometheus/client_golang/prometheus#Gauge)
 + [Java](https://github.com/prometheus/client_java/blob/master/simpleclient/src/main/java/io/prometheus/client/Gauge.java)
