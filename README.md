@@ -22,8 +22,8 @@
 
 ## 🚀 在线阅读
 
-+ Gitbook : [https://fuckcloudnative.io/prometheus/](https://fuckcloudnative.io/prometheus/)
-+ Gitbook 新版 : [https://ryanyang.gitbook.io/prometheus/](https://ryanyang.gitbook.io/prometheus/)
++ 国内访问 : [https://fuckcloudnative.io/prometheus/](https://fuckcloudnative.io/prometheus/)
++ 国外访问 : [https://ryanyang.gitbook.io/prometheus/](https://ryanyang.gitbook.io/prometheus/)
 
 ## 项目源码
 
