@@ -18,11 +18,11 @@
 
 官方文档地址：[https://prometheus.io/docs/introduction/overview/](https://prometheus.io/docs/introduction/overview/)
 
-### 🏠 [Homepage](https://www.yangcs.net/prometheus/)
+### 🏠 [Homepage](https://fuckcloudnative.io/prometheus/)
 
 ## 🚀 在线阅读
 
-+ Gitbook : [https://www.yangcs.net/prometheus/](https://www.yangcs.net/prometheus/)
++ Gitbook : [https://fuckcloudnative.io/prometheus/](https://fuckcloudnative.io/prometheus/)
 + Gitbook 新版 : [https://ryanyang.gitbook.io/prometheus/](https://ryanyang.gitbook.io/prometheus/)
 
 ## 项目源码
@@ -51,7 +51,7 @@
 
 扫码关注微信公众号，坐上云原生的早班车。
 
-![](https://hugo-picture.oss-cn-beijing.aliyuncs.com/blog/2019-06-01-%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+![](https://hugo-picture.oss-cn-beijing.aliyuncs.com/2020-04-20-20200405205151.webp)
 
 ## 作者
 
