@@ -29,7 +29,9 @@
 - 第8节：API 稳定性
 
 ## 第四章：可视化
-
+- [第一节：表达式浏览器](4-visualization/browser.md)
+- [第二节：Grafana 对 Prometheus 的支持](4-visualization/grafana.md)
+- [第三节：控制台模版](4-visualization/consoleTemplates.md)
 ## 第五章：监控手段
 
 ## 第六章：其他操作
