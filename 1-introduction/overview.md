@@ -26,7 +26,7 @@ Prometheus 生态系统由多个组件组成，其中有许多组件是可选的
 + [客户端库](../5-instrumenting/clientlibs.html)用来检测应用程序代码。
 + 用于支持临时任务的[推送网关](https://github.com/prometheus/pushgateway)。
 + [Exporter](../5-instrumenting/exporters.html) 用来监控 HAProxy，StatsD，Graphite 等特殊的监控目标，并向 Prometheus 提供标准格式的监控样本数据。
-+ [alartmanager](https://github.com/prometheus/alertmanager) 用来处理告警。
++ [alertmanager](https://github.com/prometheus/alertmanager) 用来处理告警。
 + 其他各种周边工具。
 
 其中大多数组件都是用 [Go](https://golang.org/) 编写的，因此很容易构建和部署为静态二进制文件。
