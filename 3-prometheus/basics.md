@@ -70,7 +70,7 @@ PromQL 还支持用户根据时间序列的标签匹配模式来对时间序列�
 + `=~` : 选择正则表达式与提供的字符串（或子字符串）相匹配的标签。
 + `!~` : 选择正则表达式与提供的字符串（或子字符串）不匹配的标签。
 
-例如：选择指标名称为 `http_requests_total`，环境为 `staging`、`testing` 或 `development`，HTTP 方法为 `GET` 的时间序列：
+例如：选择指标名称为 `http_requests_total`，环境为 `staging`、`testing` 或 `development`，HTTP 方法不为 `GET` 的时间序列：
 
 ```bash
 http_requests_total{environment=~"staging|testing|development",method!="GET"}
